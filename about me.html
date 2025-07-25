@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | Muhammad Tayyab Patel</title>
+  <meta name="description" content="Learn more about Muhammad Tayyab Patel, a passionate web developer from Lusaka, Zambia.">
+  <meta name="robots" content="index, follow" />
+  <meta name="keywords" content="Muhammad Tayyab Patel, about, web developer Zambia, digital entrepreneur, HTML CSS developer" />
+
+  <!-- ✅ Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- ✅ CSS File -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Open Graph (Optional for sharing) -->
+  <meta property="og:title" content="About | Muhammad Tayyab Patel" />
+  <meta property="og:description" content="Learn more about Muhammad Tayyab Patel, a web developer and digital entrepreneur in Zambia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://portfolio.muhammadtayyabpatel.xyz/about%20me.html" />
+</head>
+<body>
+
+  <header>
+    <h1>About Me</h1>
+    <nav>
+    <div class="dark-mode-toggle">
+  <label class="switch">
+    <input type="checkbox" id="modeToggle">
+    <span class="slider round"></span>
+  </label>
+  <span class="toggle-text">Dark Mode</span>
+</div>
+      <a href="index.html">Home</a>
+      <a href="about me.html">About</a>
+      <a href="contact me.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="about-section">
+    <h2>Hello, I'm Muhammad Tayyab Patel</h2>
+    <p>I’m a passionate software developer based in Zambia. I started my journey in tech through the Digital Entrepreneurship course, where I discovered my love for building things online.</p>
+    <p>I believe that technology is a powerful tool for solving problems, and I enjoy using it to make everyday tasks easier and more efficient.</p>
+    <p>My main skills include HTML, CSS, and building small web applications that are both functional and visually appealing.</p>
+    <p>I am constantly learning new tools and techniques to improve my coding and design skills.</p>
+    <p>Aside from coding, I enjoy exploring nature, learning about entrepreneurship, and sharing knowledge with others.</p>
+    <p>I am a detail-oriented person and love the process of turning a blank page into a well-designed and interactive website.</p>
+    <p>One of my biggest goals is to become a full-stack developer and eventually build apps that help people around the world.</p>
+    <p>Every project I create is a new learning experience, and I am proud of the growth I’ve made so far.</p>
+    <p>My portfolio website is a reflection of the work I’ve done and the journey I’m on.</p>
+    <p>If you’re interested in working with me or have any questions, please feel free to reach out on the contact page.</p>
+    <p>Thank you for visiting!</p>
+  </section>
+<!-- Floating WhatsApp Icon -->
+<a href="https://wa.me/message/PMEPAEZ2UJHYL1" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+  <img src="whatsapp.png" alt="WhatsApp Chat">
+</a>
+<script>
+  const toggle = document.getElementById("modeToggle");
+  const body = document.body;
+
+  // Check for saved preference
+  if (localStorage.getItem("dark-mode") === "enabled") {
+    body.classList.add("dark");
+    toggle.checked = true;
+  }
+
+  toggle.addEventListener("change", () => {
+    body.classList.toggle("dark");
+    if (body.classList.contains("dark")) {
+      localStorage.setItem("dark-mode", "enabled");
+    } else {
+      localStorage.setItem("dark-mode", "disabled");
+    }
+  });
+</script>
+</body>
+</html>

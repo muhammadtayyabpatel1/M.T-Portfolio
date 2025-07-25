@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Muhammad Tayyab Patel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Contact Me</h1>
+    <nav>
+      <div class="dark-mode-toggle">
+        <label class="switch">
+          <input type="checkbox" id="modeToggle">
+          <span class="slider round"></span>
+        </label>
+        <span class="toggle-text">Dark Mode</span>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="about me.html">About</a>
+      <a href="contact me.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="contact-section fancy-contact">
+    <h2>Get in Touch</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <img src="email.png" alt="Email" />
+        <h3>Email</h3>
+        <p><a href="mailto:muhammadtayyabpatel@gmail.com">muhammadtayyabpatel@gmail.com</a></p>
+      </div>
+      <br>
+      <div class="contact-card">
+        <img src="marker.png" alt="Location" />
+        <h3>Address</h3>
+        <p>Lusaka, Zambia</p>
+      </div>
+      <br>
+      <div class="contact-card">
+        <img src="phone.png" alt="Phone" />
+        <h3>Phone</h3>
+        <p>+260 950 778 686<br>+260 773 043 004</p>
+      </div>
+      <br>
+      <div class="contact-card">
+        <img src="whatsapp.png" alt="WhatsApp" />
+        <h3>WhatsApp</h3>
+        <p><a href="https://wa.me/message/PMEPAEZ2UJHYL1" target="_blank">Message Me</a></p>
+      </div>
+      <br>
+      <div class="contact-card">
+        <img src="planner.png" alt="Hours" />
+        <h3>Working Hours</h3>
+        <p>Mon – Fri<br>9:00 AM to 5:00 PM</p>
+      </div>
+    </div>
+    
+  </section>
+
+  <!-- Floating WhatsApp Icon -->
+  <a href="https://wa.me/message/PMEPAEZ2UJHYL1" class="floating-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="whatsapp.png" alt="WhatsApp Chat" />
+  </a>
+
+  <script>
+    const toggle = document.getElementById("modeToggle");
+    const body = document.body;
+
+    if (localStorage.getItem("dark-mode") === "enabled") {
+      body.classList.add("dark");
+      toggle.checked = true;
+    }
+
+    toggle.addEventListener("change", () => {
+      body.classList.toggle("dark");
+      localStorage.setItem("dark-mode", body.classList.contains("dark") ? "enabled" : "disabled");
+    });
+  </script>
+</body>
+</html>
